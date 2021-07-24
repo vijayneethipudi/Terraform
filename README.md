@@ -11,3 +11,13 @@ Installation in windows 10
 7. Once that is done click Ok -> OK -> OK
 
 Open Powershell -> type   `terrform -help` -> It should give you some results. 
+
+Commands
+---
+`terraform init`
+
+`terraform apply`
+
+`terraform show`
+
+`terraform destroy` 
