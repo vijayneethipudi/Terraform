@@ -8,4 +8,4 @@ Save the file
 
 It will show you what resources are going to create, type `yes` and hit enter. 
 
-If you want to see what resources are created, type `terraform show`
+If you want to see what resources are created, use `terraform show`
