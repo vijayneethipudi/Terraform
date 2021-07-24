@@ -6,5 +6,6 @@ Save the file
 
 `terraform apply`
 
-
 It will show you what resources are going to create, type `yes` and hit enter. 
+
+If you want to see what resources are created, type `terraform show`
