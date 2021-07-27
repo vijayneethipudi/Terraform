@@ -12,32 +12,15 @@ provider "aws" {
     region = "us-east-1"
 }
 
-# resource "aws_vpc" "testvpc" {
-#     cidr_block = "10.10.0.0/16"
-#     enable_dns_support = true
-#     enable_dns_hostnames = true
-#     tags = {
-#         Name = "testvpc"
-#     }
-# }
+# This template creates 6 resoures
+# 1 IAM role,
+# 1 IAM policy, 
+# 1 Attach the policy and role, 
+# 1 Instance Profile,
+# 1 EC2 instance, 
+# 1 Security group
 
-# resource "aws_subnet" "publicSubnet" {
-#     cidr_block = "10.10.10.0/24"
-#     vpc_id = aws_vpc.testvpc.id
-#     availability_zone = "us-east-1a"
-#     map_public_ip_on_launch = true
-#     tags = {
-#       "Name" = "Public Subnet"
-#     }
-# }
-# resource "aws_subnet" "privateSubnet" {
-#     cidr_block = "10.10.11.0/24"
-#     vpc_id = aws_vpc.testvpc.id
-#     availability_zone = "us-east-1a"
-#     tags = {
-#       "Name" = "Private Subnet"
-#     }
-# }
+# S3 full access policy is attached to the IAM role and ec2 instance assume the role to access s3 bucket via public internet
 
 resource "aws_iam_role" "test_role" {
     name = "test_role"
