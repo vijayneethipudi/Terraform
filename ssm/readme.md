@@ -1,6 +1,7 @@
-#Connect to Private Instance without Bastion host
+Connect to Private Instance without Bastion host
+---
 
-We can connect to Private EC2 instance without a Bastion host usually resides in the public subnet.
+We can connect to Private EC2 instance without a Bastion host which is usually resides in the public subnet.
 
 We need below requirements to successfully connect to private instance using `ssm`
 1. SSM Role (AmazonSSMManagedInstanceCore)
