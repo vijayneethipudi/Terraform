@@ -42,7 +42,6 @@ data "aws_ami" "latest_instance" {
 resource "aws_instance" "public_instance" {
     ami = data.aws_ami.latest_instance.id
     instance_type = var.instance_type
-    key_name = var.key_name
     subnet_id = module.vpc.public_subnets[0]
     iam_instance_profile = aws_iam_instance_profile.AWSSSMInstanceCore.name
     security_groups = [aws_security_group.public_ec2_sg.id]
@@ -53,7 +52,6 @@ resource "aws_instance" "public_instance" {
 resource "aws_instance" "private_instance" {
     ami = data.aws_ami.latest_instance.id
     instance_type = var.instance_type
-    key_name = var.key_name
     subnet_id = module.vpc.private_subnets[0]
     iam_instance_profile = aws_iam_instance_profile.AWSSSMInstanceCore.name
     security_groups = [aws_security_group.private_ec2_sg.id]
